@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:study_flutter_get_it/app/shared/service_injection/service_locator.dart';
 import 'package:study_flutter_get_it/app/shared/util/console_logger.dart';
 
 class HomePage extends StatefulWidget {
@@ -11,7 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final logger = ConsoleLogger();
+  final logger = serviceLocator.get<ConsoleLogger>();
   int _counter = 0;
 
   void _incrementCounter() {
